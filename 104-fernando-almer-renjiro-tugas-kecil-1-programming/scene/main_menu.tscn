@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cs51abk2crgw3"]
+
+[ext_resource type="Script" uid="uid://nnee26rwtmqq" path="res://scene/main_menu.gd" id="1_2fwvj"]
+[ext_resource type="Texture2D" uid="uid://bcbxipj56kh5x" path="res://scene/g21qf4sq86s51.png" id="1_hxu56"]
+[ext_resource type="FontFile" uid="uid://c1ukog34qfnmb" path="res://scene/Daydream DEMO.otf" id="2_2fwvj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1lj4"]
+texture = ExtResource("1_hxu56")
+modulate_color = Color(0.48178947, 0.48178947, 0.48178947, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fwvj"]
+bg_color = Color(3.272891e-06, 0.6662966, 0.8550196, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxu56"]
+bg_color = Color(1.540184e-06, 0.37364906, 0.48740882, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0iwki"]
+bg_color = Color(0, 0.5205258, 0.6706424, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+
+[node name="MainMenu" type="Control" unique_id=1899205998]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2fwvj")
+
+[node name="Panel" type="Panel" parent="." unique_id=799124559]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_b1lj4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=70413904]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.625
+offset_top = -14.0
+offset_right = 191.625
+offset_bottom = 212.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1591168121]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2fwvj")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fwvj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hxu56")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0iwki")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1010235477]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2fwvj")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fwvj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hxu56")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0iwki")
+text = "Information"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1291824376]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2fwvj")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_2fwvj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hxu56")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0iwki")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=1134363988]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -382.5
+offset_top = -227.0
+offset_right = 382.5
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_fonts/font = ExtResource("2_2fwvj")
+theme_override_font_sizes/font_size = 60
+text = "Game Pertama"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1035214072]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -376.0
+offset_top = -157.0
+offset_right = 389.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_fonts/font = ExtResource("2_2fwvj")
+theme_override_font_sizes/font_size = 20
+text = "Maaf  Backgroundnya  Pake  AI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]

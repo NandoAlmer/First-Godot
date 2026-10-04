@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bu0h1i08u05bq"]
+
+[ext_resource type="PackedScene" uid="uid://be1ocpxgaaesm" path="res://scene/player.tscn" id="1_5kiuu"]
+[ext_resource type="Texture2D" uid="uid://c0e2p8tvtgpbx" path="res://scene/Lanskap Platformer Pixel Cerah.png" id="1_dbls1"]
+[ext_resource type="Script" uid="uid://0qhv38ak075m" path="res://scene/game.gd" id="1_xwcet"]
+[ext_resource type="FontFile" uid="uid://c1ukog34qfnmb" path="res://scene/Daydream DEMO.otf" id="4_p1ry8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13qdw"]
+size = Vector2(1678.4558, 192.444)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1lj4"]
+size = Vector2(237.11809, 77.085434)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbls1"]
+size = Vector2(220.18106, 75.05687)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33cqm"]
+size = Vector2(296.39758, 75.05687)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwcet"]
+size = Vector2(224.41534, 74.04259)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlg7c"]
+bg_color = Color(3.272891e-06, 0.6662966, 0.8550196, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qpk70"]
+bg_color = Color(1.540184e-06, 0.37364906, 0.48740882, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ll5lq"]
+bg_color = Color(0, 0.5205258, 0.6706424, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+
+[node name="game" type="Node2D" unique_id=1786166644]
+position = Vector2(0, 32)
+script = ExtResource("1_xwcet")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1797026925]
+position = Vector2(-0.43750143, -31.968758)
+scale = Vector2(0.23616923, 0.24647978)
+texture = ExtResource("1_dbls1")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1589787906]
+position = Vector2(-1, -35)
+zoom = Vector2(3, 3)
+
+[node name="player" parent="." unique_id=499110031 instance=ExtResource("1_5kiuu")]
+position = Vector2(-3, -6)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1786623864]
+position = Vector2(-0.43750143, -31.968758)
+scale = Vector2(0.23616923, 0.24647978)
+
+[node name="lantai" type="CollisionShape2D" parent="StaticBody2D" unique_id=2120944494]
+position = Vector2(5.2407455, 405.58612)
+shape = SubResource("RectangleShape2D_13qdw")
+
+[node name="plat1" type="CollisionShape2D" parent="StaticBody2D" unique_id=1087228287]
+position = Vector2(-281.84244, 40.4445)
+shape = SubResource("RectangleShape2D_b1lj4")
+
+[node name="plat2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1157336975]
+position = Vector2(158.51988, -78.22647)
+shape = SubResource("RectangleShape2D_dbls1")
+
+[node name="plat3" type="CollisionShape2D" parent="StaticBody2D" unique_id=113372730]
+position = Vector2(-692.5648, -194.8689)
+shape = SubResource("RectangleShape2D_33cqm")
+
+[node name="plat4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2084901479]
+position = Vector2(711.08966, -85.83358)
+shape = SubResource("RectangleShape2D_xwcet")
+
+[node name="Button2" type="Button" parent="." unique_id=936918141]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 145.0
+offset_top = -141.0
+offset_right = 190.0
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_p1ry8")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/normal = SubResource("StyleBoxFlat_xlg7c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qpk70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ll5lq")
+text = "Back"
+
+[connection signal="pressed" from="Button2" to="." method="_on_back_game_pressed"]
